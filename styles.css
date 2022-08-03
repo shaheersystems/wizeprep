@@ -1,0 +1,195 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  object-fit: cover;
+}
+
+nav {
+  background: #ffd031;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: sticky;
+  top: 0;
+}
+.logo-main {
+  display: flex;
+  gap: 10px;
+}
+svg {
+  height: 20px;
+}
+.links a {
+  color: black;
+  font-weight: 600;
+  padding: 5px 15px;
+}
+.div-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.div-btn a {
+  padding: 7px 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  color: white;
+}
+.div-btn a:nth-child(2) {
+  background: white;
+  color: #377fff;
+}
+.toggle {
+  display: none;
+}
+.wrapper {
+  background: #ffd031;
+  padding: 20px;
+}
+.banner {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+.banner .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.text span {
+  font-weight: 600;
+}
+.text h1 {
+  font-size: 60px;
+  color: #00041a;
+}
+.text p {
+  font-size: 20px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+.img {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner img {
+  height: 90%;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btns {
+  display: flex;
+  gap: 15px;
+}
+.btns a {
+  padding: 7px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+.btns a:nth-child(1) {
+  background: white;
+  border: 1px solid white;
+  color: #00041a;
+}
+.btns a:nth-child(2) {
+  border: 1px solid #00041a;
+  color: #00041a;
+}
+.side {
+  height: 100vh;
+  position: fixed;
+  width: 220px;
+  background: white;
+  z-index: 9000;
+  top: 0%;
+  background: #00041a;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-top: 100px;
+  transform: translate(-100%);
+  transition: 0.2s all;
+}
+.open {
+  transition: 0.2s all;
+  transform: translate(0%);
+}
+.side .logo {
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+.side .logo svg {
+  fill: white;
+}
+.side .links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.side .links a {
+  color: white;
+  transition: 0.2s all;
+}
+.side .links a:hover {
+  color: #00041a;
+  background: #ffd031;
+}
+@media all and (max-width: 1110px) {
+  .banner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .text h1 {
+    font-size: 50px;
+  }
+  .btns {
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 740px) {
+  .links {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
+  .banner h1 {
+    font-size: 30px;
+  }
+  .banner p {
+    font-size: 16px;
+  }
+}
